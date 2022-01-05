@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from '../home/home.page';
 import { LoginPage } from './login.page';
@@ -77,7 +77,7 @@ describe('LoginPage', () => {
     expect(page.querySelector("#login").disabled).toBeFalsy();
   });
 
-  it('given form is valid, when user clicks on login butotn, then go to home page', done => {
+  it('given form is valid, when user clicks on login butotn, then go to home page', fakeAsync(() => {
     fixture.detectChanges();
 
     component.form.get("email").setValue("any@email.com");
@@ -87,10 +87,9 @@ describe('LoginPage', () => {
     page.querySelector("#login").click();
     fixture.detectChanges();
 
-    setTimeout(() => {
-      expect(location.path()).toEqual("/home");
-      done();
-    }, 500);
-  });
+    tick(100);
+    
+    expect(location.path()).toEqual("/home");
+  }));
 
 });
