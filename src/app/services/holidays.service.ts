@@ -23,17 +23,3 @@ export class HolidaysService {
   }
 
 }
-
-/**
- * The https://api.m3o.com/v1/holidays/Countries API call returns this type
- */
-type CountryApiResponse = {
-  countries: Country[];
-}
-
-/**
- * The https://api.m3o.com/v1/holidays/List API call returns this type
- */
-type CountryHolidaysApiResponse = {
-  holidays: CountryHoliday[];
-}

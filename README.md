@@ -1,8 +1,9 @@
 # Ionic Coding Challenge
-This is NOT a timed challenge, this is a best practices challenge.
+This Ionic challenge has a time limit of 2 hours.
 Think about: Interfaces vs Classes, Dry Principles, Solid Principles etc.
 
-Complete and push this before the interview.
+Complete and push this before that time limit.
+Any other commit after that time limit will be ignored.
 
 ## Instructions:
 
