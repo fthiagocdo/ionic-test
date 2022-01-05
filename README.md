@@ -17,7 +17,7 @@ Implement a login form using FormGroup/FormBuilder with the following:
 Implement a home page that lists all the countries that come from the API listed on https://m3o.com/holidays/api#List.
 You will need to create an account on that API in order to use it.
 1. The API should be called when the page inits using the HolidaysService already created, but not implemented;
-2. Each country element should have the id equal to the country code (as id="<country.code>") and the class 'holiday' (as class="country");
+2. Each country clickable element should have the id equal to the country code (as id="<country.code>") and the class 'holiday' (as class="country");
 3. When you click on one of the countries, redirect to the country holidays page
 
 ### Country holidays page (/countries/:id/holidays):
@@ -28,6 +28,8 @@ You will need to create an account on that API in order to use it.
 3. This page should have a back button that takes the user back to the home page
 
 ## Further Instructions
+
+Do not change any of the *.spec.ts files
 
 # Commands
 

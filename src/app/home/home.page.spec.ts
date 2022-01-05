@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { IonicModule } from '@ionic/angular';
 import { of } from 'rxjs';
@@ -47,15 +47,14 @@ describe('HomePage', () => {
     expect(page.querySelectorAll(".country").length).toEqual(110);
   });
 
-  it('given countries loaded, when user clicks on country, then go to country holidays page', done => {
+  it('given countries loaded, when user clicks on country, then go to country holidays page', fakeAsync(() => {
     page.querySelector("#BR").click();
     fixture.detectChanges();
 
-    setTimeout(() => {
-      expect(location.path()).toEqual("/countries/BR/holidays");
-      done();
-    }, 100)
-  });
+    tick(100);
+
+    expect(location.path()).toEqual("/countries/BR/holidays");
+  }));
 
   class HolidaysServiceMock {
     _foundCountries = false;
