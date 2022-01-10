@@ -1,11 +1,13 @@
 # Ionic Coding Challenge
+
 This Ionic challenge has a time limit of 2 hours.
 Think about: Interfaces vs Classes, Dry Principles, Solid Principles etc.
 
-Complete and push this before that time limit.
-Any other commit after that time limit will be ignored.
-
 ## Instructions:
+
+Create a new branch with your name on it so we can recognize that test was made by you. In case your name is Darth MiddleName Vader, then your branch should be called (darth-vader).
+Complete and push this test before the 2h time limit.
+Any other commit after that time limit will be ignored.
 
 ### Login page (/login):
 Implement a login form using FormGroup/FormBuilder with the following:
