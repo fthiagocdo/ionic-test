@@ -1,2 +1,13 @@
-<ion-content>
+<ion-content padding>
+  <ion-card
+    *ngFor="let country of countries"
+    (click)="navigateToHoliday(country)"
+    [id]="country.code"
+    class="country"
+  >
+    <ion-card-content>
+      <h2>{{country.name}}</h2>
+      <p>{{country.code}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
