@@ -9,6 +9,9 @@ Create a new branch with your name on it so we can recognize that test was made 
 Complete and push this test before the 2h time limit.
 Any other commit after that time limit will be ignored.
 
+All tests must pass for your challenge to be completed.
+So, don't forget to run the "npm test" command.
+
 ### Login page (/login):
 Implement a login form using FormGroup/FormBuilder with the following:
 1. Email address (required and valid email address). Its form control name should be "email";

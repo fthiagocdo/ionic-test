@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePage } from '../home/home.page';
 import { LoginPage } from './login.page';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('LoginPage', () => {
   let component: LoginPage;
@@ -16,6 +17,7 @@ describe('LoginPage', () => {
       declarations: [ LoginPage ],
       imports: [
         IonicModule.forRoot(),
+        ReactiveFormsModule,
         RouterTestingModule.withRoutes([
           {path: 'home', component: HomePage}
         ]),
