@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,20 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-
   form: FormGroup;
 
+  constructor(private router: Router, private formBuilder: FormBuilder) {
+    this.form = formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
+  }
+
+  signIn() {
+    if (this.form.invalid) {
+      return;
+    }
+
+    this.router.navigateByUrl('/home');
+  }
 }
