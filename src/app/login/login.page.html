@@ -1,2 +1,26 @@
 <ion-content>
+    <div class="flex-center">
+        <form [formGroup]="form">
+            <ion-card>
+                <ion-card-content>
+                    <ion-item lines="full"><img class="logo-image"/></ion-item>
+                    <ion-item lines="full">
+                        <ion-label position="floating">Email</ion-label>
+                        <ion-input type="email" formControlName="email"></ion-input>
+                    </ion-item>
+                    <app-error-message [field]="form.get('email')" error="required" message="Email is mandatory"></app-error-message>
+                    <app-error-message [field]="form.get('email')" error="email" message="Email is invalid"></app-error-message>
+        
+                    <ion-item lines="full">
+                        <ion-label position="floating">Password</ion-label>
+                        <ion-input type="password" formControlName="password"></ion-input>
+                    </ion-item>
+                    <app-error-message [field]="form.get('password')" error="required" message="Password is mandatory"></app-error-message>
+                    <app-error-message [field]="form.get('password')" error="minlength" message="Password should be 6 or more characters"></app-error-message>
+        
+                    <ion-button id="login" size="full" [disabled]="!form.valid" (click)="submitLoginForm()">Confirm</ion-button>
+                </ion-card-content>
+            </ion-card>
+        </form>
+    </div>
 </ion-content>
