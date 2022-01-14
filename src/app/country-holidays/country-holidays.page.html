@@ -1,2 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Holidays</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button icon="arrow-back-outline" defaultHref="home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
 <ion-content>
+    <ion-list>
+        <ion-card id="{{ holiday.name }}" class="holiday" *ngFor="let holiday of holidays">
+            <ion-card-title>{{ holiday.name }}</ion-card-title>
+            <ion-card-content>
+                <p>Date: {{ holiday.date | date:'MMMM d, yyyy' }}</p>
+                <p>Local name: {{ holiday.local_name }}</p>
+                <p>Type: {{ holiday.types }}</p>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
 </ion-content>

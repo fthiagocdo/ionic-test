@@ -1,0 +1,31 @@
+ion-card {
+    padding: 10px;
+    border-radius: 10px;
+    width: 95%;
+    height: 95%;
+}
+
+ion-card {
+    color: black !important;
+    --background: grey;
+}
+
+ion-label {
+    --color: grey !important;
+}
+
+ion-icon {
+    color: grey !important
+}
+
+ion-title {
+    padding: 10px;
+}
+
+ion-list {
+    background-color: lightgrey !important;
+}
+
+ion-toolbar {
+    --background: grey !important;
+}
